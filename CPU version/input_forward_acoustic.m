@@ -9,7 +9,7 @@ vp=ones(3000,3000)*2000;
 dt=10^-3;
 dx=10;
 dz=10;
-nt=1000;
+nt=100;
 nx=size(vp,1);
 nz=size(vp,2);
 
