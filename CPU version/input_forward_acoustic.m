@@ -3,21 +3,21 @@ close all;
 clear all;
 
 % load image
-vp=ones(3000,3000)*2000;
+vp=2000;
 
 % dimensions
 dt=10^-3;
 dx=10;
 dz=10;
 nt=100;
-nx=size(vp,1);
-nz=size(vp,2);
+nx=6000;
+nz=6000;
 
 X=[0,dx*nx];
 Z=[0,-dz*nz];
 
 % generate empty density
-C.rho=ones(nx,nz)*1;
+C.rho=1;
 
 % Lame constants
 C.lambda=C.rho.*vp.^2;
