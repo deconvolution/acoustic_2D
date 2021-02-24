@@ -23,7 +23,7 @@ close all;
 clear all;
 
 % load image
-vp=ones(3000,3000)*2000;
+vp=gpuArray(ones(3000,3000))*2000;
 
 % dimensions
 dt=10^-3;

@@ -61,9 +61,4 @@ acoustic_2D(dt,dx,dz,nt,nx,nz,...
     C, ...
     plot_interval, ...
     path);
-
-toc;
-%%
-tic;
-a=zeros(5000,5000)+ones(5000,5000);
 toc;

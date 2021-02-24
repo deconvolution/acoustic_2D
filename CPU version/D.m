@@ -1,23 +1,18 @@
-function u2=D(u,direction)
+function u=D(u,direction)
 %% first order
 
 switch direction
     case 1
         % backward
-        u2=-1*ad(u(1:end-1,:),1,-1) ...
-            +1*u;
+        u(2:end,:)=diff(u,1,1);
     case -1
         % forward
-        u2=-1*u ...
-            +1*ad(u(2:end,:),1,1);
+        u(1:end-1,:)=diff(u,1,1);
     case 3
-        u2=-1*ad(u(:,1:end-1),1,-3) ...
-            +1*u;
+        u(:,2:end)=diff(u,1,2);
     case -3
-        u2=-1*u ...
-            +1*ad(u(:,2:end),1,3);
+        u(:,1:end-1)=diff(u,1,2);
 end
-
 %% third order
 %{
 switch direction
